@@ -1,8 +1,9 @@
 apt-get install build-essential libssl-dev    # for Ubuntu / Debian
 
 killall minivtun
-echo 333
-sleep 3
+
+echo 333;sleep 3
+
 /usr/sbin/minivtun -l 0.0.0.0:1444  -a 10.78.44.1/24  -e xxxxxxxx -m 1420 -n tun44  -t rc4 -d 
 
 
