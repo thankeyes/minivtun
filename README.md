@@ -1,3 +1,11 @@
+apt-get install build-essential libssl-dev    # for Ubuntu / Debian
+
+killall minivtun
+echo 333
+sleep 3
+/usr/sbin/minivtun -l 0.0.0.0:1444  -a 10.78.44.1/24  -e xxxxxxxx -m 1420 -n tun44  -t rc4 -d 
+
+
 # minivtun
 A fast secure and reliable VPN service in non-standard protocol for rapidly deploying VPN servers/clients or getting through firewalls
 
@@ -18,6 +26,9 @@ Install required development components
 Compile and install
 
     git clone https://github.com/rssnsj/minivtun.git minivtun
+    
+    git clone https://github.com/thankeyes/minivtun.git minivtun
+    
     cd minivtun/src
     make
     sudo make install
